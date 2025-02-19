@@ -19,7 +19,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Vogueverve",
+  title: "Trendystrove",
   description:
     "Your destination for premium footwear. Quality meets style in every step.",
 };

@@ -9,8 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            {/* <h3 className="text-lg font-semibold">Vogueverve</h3> */}
-            <Image src="/logo.png" alt="Vogueverve" width={260} height={30} />
+            {/* <h3 className="text-lg font-semibold">Trendystrove</h3> */}
+            <Image src="/logo.png" alt="Trendystrove" width={260} height={30} />
             <p className="text-sm text-gray-600">
               Your destination for premium footwear. Quality meets style in
               every step.
@@ -133,7 +133,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-100">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Vogueverve. All rights reserved.
+              © {new Date().getFullYear()} Trendystrove All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link

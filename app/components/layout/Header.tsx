@@ -19,10 +19,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold">
-              {/* Vogueverve */}
+              {/* Trendystrove */}
               <Image
                 src={"/logo.png"}
-                alt="Vogueverve"
+                alt="Trendystrove"
                 width={160}
                 height={30}
               />
