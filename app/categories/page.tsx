@@ -1,29 +1,29 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface Category {
-  id: string
-  name: string
-  slug: string
-  productCount?: number
+  id: string;
+  name: string;
+  slug: string;
+  productCount?: number;
 }
 
 export default function CategoriesPage() {
-  const [categories, setCategories] = useState<Category[]>([])
-  const [loading, setLoading] = useState(true)
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('/api/products')
-        if (!response.ok) throw new Error('Failed to fetch categories')
-        const data = await response.json()
-        
+        const response = await fetch("/api/products_full");
+        if (!response.ok) throw new Error("Failed to fetch categories");
+        const data = await response.json();
+
+        console.log(data);
         // Count products per category
         const categoriesWithCount = data.filters.availableCategories.map(
           (category: Category) => ({
@@ -32,18 +32,20 @@ export default function CategoriesPage() {
               product.categories.some((cat: any) => cat.id === category.id)
             ).length,
           })
-        )
+        );
 
-        setCategories(categoriesWithCount)
+        setCategories(categoriesWithCount);
       } catch (error) {
-        console.error('Error:', error)
+        console.error("Error:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    fetchCategories()
-  }, [])
+    fetchCategories();
+  }, []);
+
+  console.log(categories);
 
   if (loading) {
     return (
@@ -56,7 +58,7 @@ export default function CategoriesPage() {
           ))}
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -94,5 +96,5 @@ export default function CategoriesPage() {
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}

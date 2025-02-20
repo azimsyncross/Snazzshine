@@ -1,12 +1,13 @@
 import BestSellers from "./components/sections/BestSellers";
 import FashionCarousel from "./components/sections/fashion-carousel";
 import FeaturedProducts from "./components/sections/FeaturedProducts";
-import Hero from "./components/sections/Hero";
+import ImageSlider from "./components/sections/ImageSlider";
 
 export default function Home() {
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
+      <ImageSlider />
       <FashionCarousel />
       <FeaturedProducts />
       <BestSellers />

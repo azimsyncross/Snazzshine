@@ -14,11 +14,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -72,11 +67,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -84,7 +74,7 @@
         6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13
       ],
 
-      "tags": ["bestSeller", "featured"],
+      "tags": ["bestSeller", "featured", "fashion2"],
 
       "basePrice": 1059.99,
       "compareAtPrice": 1289.99,
@@ -129,11 +119,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -184,11 +169,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -239,11 +219,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -294,11 +269,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -349,11 +319,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -404,11 +369,6 @@
           "id": "cat_001",
           "name": "Footwear",
           "slug": "footwear"
-        },
-        {
-          "id": "cat_002",
-          "name": "Running Shoes",
-          "slug": "running-shoes"
         }
       ],
 
@@ -457,14 +417,9 @@
 
       "categories": [
         {
-          "id": "cat_003",
-          "name": "Formal Shoes",
-          "slug": "formal-shoes"
-        },
-        {
-          "id": "cat_004",
-          "name": "Business",
-          "slug": "business"
+          "id": "cat_001",
+          "name": "Footwear",
+          "slug": "footwear"
         }
       ],
 
@@ -507,9 +462,9 @@
 
       "categories": [
         {
-          "id": "cat_005",
-          "name": "Skateboarding",
-          "slug": "skateboarding"
+          "id": "cat_001",
+          "name": "Footwear",
+          "slug": "footwear"
         },
         {
           "id": "cat_006",
@@ -562,14 +517,9 @@
 
       "categories": [
         {
-          "id": "cat_007",
-          "name": "Soccer",
-          "slug": "soccer"
-        },
-        {
-          "id": "cat_008",
-          "name": "Cleats",
-          "slug": "cleats"
+          "id": "cat_001",
+          "name": "Footwear",
+          "slug": "footwear"
         }
       ],
 
@@ -779,14 +729,9 @@
 
       "categories": [
         {
-          "id": "cat_007",
-          "name": "Soccer",
-          "slug": "soccer"
-        },
-        {
-          "id": "cat_008",
-          "name": "Cleats",
-          "slug": "cleats"
+          "id": "cat_001",
+          "name": "Footwear",
+          "slug": "footwear"
         }
       ],
 
@@ -817,6 +762,389 @@
 
       "createdAt": "2024-12-08T10:00:00Z",
       "updatedAt": "2025-01-15T08:30:00Z"
+    },
+    {
+      "id": "prod_0141",
+      "name": "Drawstring Dress",
+      "slug": "drawstring-dress",
+      "description": "A chic and comfortable dress featuring an adjustable drawstring waist for a perfect fit. Ideal for casual and semi-formal occasions.",
+      "shortDescription": "Stylish drawstring waist dress",
+      "brand": "LuxeStyle",
+      "model": "Drawstring Dress",
+
+      "categories": [
+        {
+          "id": "cat_003",
+          "name": "Clothing",
+          "slug": "clothing"
+        },
+        {
+          "id": "cat_014",
+          "name": "Dresses",
+          "slug": "dresses"
+        }
+      ],
+
+      "size": ["S", "M", "L", "XL", "XXL"],
+
+      "tags": ["dress", "drawstring", "casual", "fashion1"],
+
+      "basePrice": 1044.99,
+      "compareAtPrice": 1254.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-02-25T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/drawstring-dress.jpg",
+          "alt": "Drawstring Dress - Front View",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.6,
+      "totalReviews": 75,
+
+      "createdAt": "2025-02-18T10:00:00Z",
+      "updatedAt": "2025-02-25T08:30:00Z"
+    },
+    {
+      "id": "prod_0125",
+      "name": "Mesh Sandal",
+      "slug": "mesh-sandal",
+      "description": "Lightweight and breathable mesh sandals, perfect for summer wear. Features a durable sole and stylish design.",
+      "shortDescription": "Breathable mesh summer sandals",
+      "brand": "LuxeStyle",
+      "model": "Mesh Sandal",
+
+      "categories": [
+        {
+          "id": "cat_001",
+          "name": "Footwear",
+          "slug": "footwear"
+        }
+      ],
+
+      "size": [6, 7, 8, 9, 10, 11, 12],
+
+      "tags": ["sandal", "mesh", "breathable", "summer", "fashion2"],
+
+      "basePrice": 2029.99,
+      "compareAtPrice": 2139.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-02-26T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/mesh-sandal.jpg",
+          "alt": "Mesh Sandal - Side View",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.5,
+      "totalReviews": 68,
+
+      "createdAt": "2025-02-19T10:00:00Z",
+      "updatedAt": "2025-02-26T08:30:00Z"
+    },
+    {
+      "id": "prod_0162",
+      "name": "Tribal Grey Blazer",
+      "slug": "tribal-grey-blazer",
+      "description": "A stylish and modern grey blazer with tribal-inspired accents. Perfect for business casual or evening wear.",
+      "shortDescription": "Grey blazer with tribal accents",
+      "brand": "LuxeStyle",
+      "model": "Tribal Grey Blazer",
+
+      "categories": [
+        {
+          "id": "cat_003",
+          "name": "Clothing",
+          "slug": "clothing"
+        },
+        {
+          "id": "cat_006",
+          "name": "Casual",
+          "slug": "casual"
+        },
+        {
+          "id": "cat_016",
+          "name": "Blazers",
+          "slug": "blazers"
+        }
+      ],
+
+      "size": ["S", "M", "L", "XL", "XXL"],
+
+      "tags": ["blazer", "tribal", "grey", "formal", "fashion1"],
+
+      "basePrice": 979.99,
+      "compareAtPrice": 1099.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-02-27T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/tribal-grey-blazer.jpg",
+          "alt": "Tribal Grey Blazer - Front View",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.7,
+      "totalReviews": 85,
+
+      "createdAt": "2025-02-20T10:00:00Z",
+      "updatedAt": "2025-02-27T08:30:00Z"
+    },
+    {
+      "id": "prod_0127",
+      "name": "Sweater w/ Collar",
+      "slug": "sweater-with-collar",
+      "description": "A cozy and stylish sweater featuring a classic collar design. Made from high-quality knit fabric for warmth and comfort.",
+      "shortDescription": "Warm sweater with classic collar",
+      "brand": "LuxeStyle",
+      "model": "Sweater Collar",
+
+      "categories": [
+        {
+          "id": "cat_003",
+          "name": "Clothing",
+          "slug": "clothing"
+        }
+      ],
+
+      "size": ["S", "M", "L", "XL", "XXL"],
+
+      "tags": ["sweater", "collar", "warm", "knitwear", "fashion1"],
+
+      "basePrice": 954.99,
+      "compareAtPrice": 969.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-02-28T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/sweater-with-collar.jpg",
+          "alt": "Sweater with Collar - Front View",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.8,
+      "totalReviews": 90,
+
+      "createdAt": "2025-02-21T10:00:00Z",
+      "updatedAt": "2025-02-28T08:30:00Z"
+    },
+    {
+      "id": "prod_0182",
+      "name": "Lola May Crop Blazer",
+      "slug": "lola-may-crop-blazer",
+      "description": "A chic and trendy cropped blazer from Lola May. Perfect for layering over dresses or high-waisted pants.",
+      "shortDescription": "Trendy cropped blazer",
+      "brand": "Lola May",
+      "model": "Crop Blazer",
+
+      "categories": [
+        {
+          "id": "cat_016",
+          "name": "Blazers",
+          "slug": "blazers"
+        },
+        {
+          "id": "cat_003",
+          "name": "Clothing",
+          "slug": "clothing"
+        }
+      ],
+
+      "size": ["XS", "S", "M", "L"],
+
+      "tags": ["crop blazer", "trendy", "fashion1"],
+
+      "basePrice": 969.99,
+      "compareAtPrice": 989.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-03-01T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/lola-may-crop-blazer.jpg",
+          "alt": "Lola May Crop Blazer - Front View",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.7,
+      "totalReviews": 78,
+
+      "createdAt": "2025-02-22T10:00:00Z",
+      "updatedAt": "2025-03-01T08:30:00Z"
+    },
+    {
+      "id": "prod_0191",
+      "name": "Faux Suits",
+      "slug": "faux-suits",
+      "description": "A stylish and comfortable faux suit set with a sleek design, perfect for formal or semi-formal events.",
+      "shortDescription": "Modern faux suit set",
+      "brand": "LuxeStyle",
+      "model": "Faux Suit",
+
+      "categories": [
+        {
+          "id": "cat_003",
+          "name": "Clothing",
+          "slug": "clothing"
+        }
+      ],
+
+      "size": ["S", "M", "L", "XL", "XXL"],
+
+      "tags": ["suit", "formal", "faux", "fashion"],
+
+      "basePrice": 1019.99,
+      "compareAtPrice": 1249.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-03-02T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/faux-suits.jpg",
+          "alt": "Faux Suits - Front View",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.8,
+      "totalReviews": 95,
+
+      "createdAt": "2025-02-23T10:00:00Z",
+      "updatedAt": "2025-03-02T08:30:00Z"
+    },
+    {
+      "id": "prod_0201",
+      "name": "Crew Watch",
+      "slug": "crew-watch",
+      "description": "A modern and stylish crew watch with precision movement and a sleek design, suitable for all occasions.",
+      "shortDescription": "Stylish crew wristwatch",
+      "brand": "LuxeStyle",
+      "model": "Crew Watch",
+
+      "categories": [
+        {
+          "id": "cat_019",
+          "name": "Accessories",
+          "slug": "accessories"
+        },
+        {
+          "id": "cat_020",
+          "name": "Watches",
+          "slug": "watches"
+        }
+      ],
+
+      "tags": ["watch", "crew", "fashion2", "accessories"],
+
+      "basePrice": 979.99,
+      "compareAtPrice": 999.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-03-03T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/crew-watch.jpg",
+          "alt": "Crew Watch - Close-Up",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.6,
+      "totalReviews": 82,
+
+      "createdAt": "2025-02-24T10:00:00Z",
+      "updatedAt": "2025-03-03T08:30:00Z"
+    },
+    {
+      "id": "prod_0211",
+      "name": "Jersey Stylish",
+      "slug": "jersey-stylish",
+      "description": "A comfortable and fashionable jersey with a sleek modern fit. Perfect for casual wear and sports activities.",
+      "shortDescription": "Trendy and stylish jersey",
+      "brand": "LuxeStyle",
+      "model": "Stylish Jersey",
+
+      "categories": [
+        {
+          "id": "cat_021",
+          "name": "Clothing",
+          "slug": "clothing"
+        }
+      ],
+
+      "size": ["S", "M", "L", "XL", "XXL"],
+
+      "tags": ["jersey", "sports", "fashion", "casual"],
+
+      "basePrice": 949.99,
+      "compareAtPrice": 959.99,
+      "taxable": true,
+
+      "status": "active",
+      "visibility": "visible",
+      "publishedAt": "2025-03-04T00:00:00Z",
+
+      "images": [
+        {
+          "url": "/products/jersey-stylish.jpg",
+          "alt": "Jersey Stylish - Front View",
+          "isMain": true
+        }
+      ],
+
+      "hasVariants": false,
+
+      "averageRating": 4.7,
+      "totalReviews": 88,
+
+      "createdAt": "2025-02-25T10:00:00Z",
+      "updatedAt": "2025-03-04T08:30:00Z"
     }
   ],
 
@@ -827,24 +1155,14 @@
       "slug": "footwear"
     },
     {
-      "id": "cat_002",
-      "name": "Running Shoes",
-      "slug": "running-shoes"
-    },
-    {
       "id": "cat_003",
-      "name": "Formal Shoes",
-      "slug": "formal-shoes"
+      "name": "Clothing",
+      "slug": "clothing"
     },
     {
-      "id": "cat_004",
-      "name": "Business",
-      "slug": "business"
-    },
-    {
-      "id": "cat_005",
-      "name": "Skateboarding",
-      "slug": "skateboarding"
+      "id": "cat_014",
+      "name": "Dresses",
+      "slug": "dresses"
     },
     {
       "id": "cat_006",
@@ -852,14 +1170,19 @@
       "slug": "casual"
     },
     {
-      "id": "cat_007",
-      "name": "Soccer",
-      "slug": "soccer"
+      "id": "cat_016",
+      "name": "Blazers",
+      "slug": "blazers"
     },
     {
-      "id": "cat_008",
-      "name": "Cleats",
-      "slug": "cleats"
+      "id": "cat_019",
+      "name": "Accessories",
+      "slug": "accessories"
+    },
+    {
+      "id": "cat_020",
+      "name": "Watches",
+      "slug": "watches"
     }
   ]
 }

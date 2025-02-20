@@ -1,4 +1,4 @@
-import ProductGrid from '../products/ProductGrid'
+import ProductGrid from "../products/ProductGrid";
 
 export default function BestSellers() {
   return (
@@ -10,14 +10,14 @@ export default function BestSellers() {
             Our most popular and highly rated footwear choices
           </p>
         </div>
-        <ProductGrid 
+        <ProductGrid
           queryParams={{
-            tags: ['bestSeller','premium'],
+            tags: ["fashion2", "premium"],
             limit: 4,
-            sort: 'newest'
+            sort: "newest",
           }}
         />
       </div>
     </section>
-  )
-} 
+  );
+}

@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { Button } from "@/components/ui/button"
-import Link from 'next/link'
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -9,7 +9,7 @@ export default function AboutPage() {
         {/* Image Section */}
         <div className="relative aspect-square rounded-xl overflow-hidden">
           <Image
-            src="/about.webp"
+            src="/promo_bg.jpg"
             alt="About Our Store"
             fill
             className="object-cover"
@@ -23,25 +23,26 @@ export default function AboutPage() {
               About Our Store
             </h1>
             <p className="mt-4 text-lg text-gray-600">
-              Welcome to our premium footwear destination, where style meets comfort
-              and quality meets affordability.
+              Welcome to our premium fashion destination, where style, quality,
+              and affordability come together.
             </p>
           </div>
 
           <div className="space-y-4 text-gray-600">
             <p>
-              Founded in 2024, we&apos;ve been dedicated to providing our customers with
-              the finest selection of footwear from world-renowned brands and emerging
-              designers alike.
+              Founded in 2024, we are dedicated to offering a curated selection
+              of clothing, footwear, and accessories from top global brands and
+              emerging designers.
             </p>
             <p>
-              Our mission is to help everyone find their perfect pair of shoes,
-              backed by our commitment to quality, style, and exceptional customer
-              service.
+              Our mission is to help you express your unique style with fashion
+              that blends trendsetting designs with timeless elegance—all while
+              ensuring comfort and quality.
             </p>
             <p>
-              We carefully curate our collection to ensure we offer the latest
-              trends while maintaining a solid selection of timeless classics.
+              From everyday essentials to statement pieces, our collection is
+              carefully selected to keep you ahead of the trends while providing
+              wardrobe staples that never go out of style.
             </p>
           </div>
 
@@ -62,18 +63,14 @@ export default function AboutPage() {
 
           <div className="flex gap-4 mt-4">
             <Button asChild>
-              <Link href="/products">
-                Shop Now
-              </Link>
+              <Link href="/products?sort=price_asc">Shop Now</Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href="/contact">
-                Contact Us
-              </Link>
+              <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}

@@ -9,8 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            {/* <h3 className="text-lg font-semibold">Trendystrove</h3> */}
-            <Image src="/logo.png" alt="Trendystrove" width={260} height={30} />
+            {/* <h3 className="text-lg font-semibold">Snazzshine.</h3> */}
+            <Image
+              src="/logo-1.png"
+              alt="Snazzshine."
+              width={260}
+              height={30}
+            />
             <p className="text-sm text-gray-600">
               Your destination for premium footwear. Quality meets style in
               every step.
@@ -36,7 +41,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/products"
+                  href="/products?sort=price_asc"
                   className="text-sm text-gray-600 hover:text-gray-900"
                 >
                   All Products
@@ -77,10 +82,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/categories/running-shoes"
+                  href="/categories/clothing"
                   className="text-sm text-gray-600 hover:text-gray-900"
                 >
-                  Running Shoes
+                  Cloths Collection
                 </Link>
               </li>
               <li>
@@ -93,18 +98,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/categories/formal-shoes"
+                  href="/categories/accessories"
                   className="text-sm text-gray-600 hover:text-gray-900"
                 >
-                  Formal Shoes
+                  Accessories
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/categories/sports"
+                  href="/categories/blazers"
                   className="text-sm text-gray-600 hover:text-gray-900"
                 >
-                  Sports Shoes
+                  Blazers
                 </Link>
               </li>
             </ul>
@@ -117,14 +122,16 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
-                WenQuanZhenGuanTianCunShiZiLingDui3
+                XinXiangXianZhaiPoZhenZhengFu
                 <br />
-                GuangXiLuChuanXian, 537700
+                JiaShuYuanZhenZhengFu
+                <br />
+                HeNanSheng, 453000
                 <br />
                 China
               </li>
-              <li>Phone: +86 17065985641</li>
-              <li>Email: regalacy40060@outlook.com</li>
+              <li>Phone: +86 17024747647</li>
+              <li>Email: af167f@outlook.com</li>
             </ul>
           </div>
         </div>
@@ -133,7 +140,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-100">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Trendystrove All rights reserved.
+              © {new Date().getFullYear()} Snazzshine. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link

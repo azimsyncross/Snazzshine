@@ -19,10 +19,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold">
-              {/* Trendystrove */}
+              {/* Snazzshine.*/}
               <Image
-                src={"/logo.png"}
-                alt="Trendystrove"
+                src={"/logo-1.png"}
+                alt="Snazzshine."
                 width={160}
                 height={30}
               />
@@ -32,7 +32,7 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             <Link
-              href="/products"
+              href="/products?sort=price_asc"
               className="text-sm font-medium text-gray-700 hover:text-gray-900"
             >
               Products

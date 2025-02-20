@@ -61,7 +61,7 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <Button asChild size="lg">
-              <Link href="/products">
+              <Link href="/products?sort=price_asc">
                 Shop Now <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

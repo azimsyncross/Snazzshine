@@ -65,7 +65,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-medium text-gray-900">Email</h3>
-                <p className="text-gray-600">regalacy40060@outlook.com</p>
+                <p className="text-gray-600">af167f@outlook.com</p>
               </div>
             </div>
 
@@ -75,7 +75,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-medium text-gray-900">Phone</h3>
-                <p className="text-gray-600">+86 17065985641</p>
+                <p className="text-gray-600">+86 17024747647</p>
               </div>
             </div>
 
@@ -86,9 +86,11 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-medium text-gray-900">Address</h3>
                 <p className="text-gray-600">
-                  WenQuanZhenGuanTianCunShiZiLingDui3
+                  XinXiangXianZhaiPoZhenZhengFu
                   <br />
-                  GuangXiLuChuanXian, 537700
+                  JiaShuYuanZhenZhengFu
+                  <br />
+                  HeNanSheng, 453000
                   <br />
                   China
                 </p>

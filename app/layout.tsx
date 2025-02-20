@@ -19,9 +19,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Trendystrove",
+  title: "Snazzshine.",
   description:
-    "Your destination for premium footwear. Quality meets style in every step.",
+    "Your destination for premium clothing and accessories. Quality meets style in every step.",
 };
 
 export default function RootLayout({

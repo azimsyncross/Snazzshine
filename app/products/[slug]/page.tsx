@@ -1,115 +1,121 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { Star, Truck, ArrowLeft } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import ProductImageGallery from "@/app/components/products/ProductImageGallery";
+import RelatedProducts from "@/app/components/products/RelatedProducts";
+import { useShopping } from "@/app/contexts/shopping-context";
+import { Product } from "@/app/types";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
-import ProductImageGallery from '@/app/components/products/ProductImageGallery'
-import RelatedProducts from '@/app/components/products/RelatedProducts'
-import { useShopping } from '@/app/contexts/shopping-context'
-import { cn } from '@/lib/utils'
-import { Product } from '@/app/types'
+} from "@/components/ui/select";
+import { cn } from "@/lib/utils";
+import { ArrowLeft, Star, Truck } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface ProductDetails {
-  id: string
-  name: string
-  description: string
-  shortDescription: string
-  basePrice: number
-  compareAtPrice?: number
+  id: string;
+  name: string;
+  description: string;
+  shortDescription: string;
+  basePrice: number;
+  compareAtPrice?: number;
   images: Array<{
-    url: string
-    alt: string
-    isMain?: boolean
-  }>
-  size: number[]
-  averageRating: number
-  totalReviews: number
-  tags: string[]
+    url: string;
+    alt: string;
+    isMain?: boolean;
+  }>;
+  size: number[];
+  averageRating: number;
+  totalReviews: number;
+  tags: string[];
   categories: Array<{
-    id: string
-    name: string
-    slug: string
-  }>
+    id: string;
+    name: string;
+    slug: string;
+  }>;
 }
 
-export default function ProductPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const [product, setProduct] = useState<Product | null>(null)
-  const [selectedSize, setSelectedSize] = useState<string>('')
-  const [loading, setLoading] = useState(true)
-  const [showSizeError, setShowSizeError] = useState(false)
-  const { addToCart, addToWishlist, removeFromWishlist, wishlist } = useShopping()
-  const [relatedProducts, setRelatedProducts] = useState<Product[]>([])
+export default function ProductPage({ params }: { params: { slug: string } }) {
+  const [product, setProduct] = useState<Product | null>(null);
+  const [selectedSize, setSelectedSize] = useState<string>("");
+  const [loading, setLoading] = useState(true);
+  const [showSizeError, setShowSizeError] = useState(false);
+  const { addToCart, addToWishlist, removeFromWishlist, wishlist } =
+    useShopping();
+  const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch('/api/products')
-        if (!response.ok) throw new Error('Failed to fetch product')
-        const data = await response.json()
-        const foundProduct = data.products.find((product: Product) => product.slug === params.slug)
+        const response = await fetch("/api/products");
+        if (!response.ok) throw new Error("Failed to fetch product");
+        const data = await response.json();
+        const foundProduct = data.products.find(
+          (product: Product) => product.slug === params.slug
+        );
         if (foundProduct) {
-          setProduct(foundProduct)
+          setProduct(foundProduct);
           // Set related products here
-          const related = foundProduct.categories?.flatMap((category: { id: string }) => 
-            data.products.filter((p: Product) => 
-              p.id !== foundProduct.id && 
-              p.categories?.some((c: { id: string }) => c.id === category.id)
-            )
-          ) || []
-          setRelatedProducts(related.slice(0, 4))
+          const related =
+            foundProduct.categories?.flatMap((category: { id: string }) =>
+              data.products.filter(
+                (p: Product) =>
+                  p.id !== foundProduct.id &&
+                  p.categories?.some(
+                    (c: { id: string }) => c.id === category.id
+                  )
+              )
+            ) || [];
+          setRelatedProducts(related.slice(0, 4));
         }
       } catch (error) {
-        console.error('Error fetching product:', error)
+        console.error("Error fetching product:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    fetchProduct()
-  }, [params.slug])
+    fetchProduct();
+  }, [params.slug]);
 
   if (loading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   if (!product) {
-    return <div>Product not found</div>
+    return <div>Product not found</div>;
   }
 
-  const isInWishlist = wishlist.some(item => item.id === product.id)
-  
+  const isInWishlist = wishlist.some((item) => item.id === product.id);
+
   const discount = product.compareAtPrice
-    ? Math.round(((product.compareAtPrice - product.basePrice) / product.compareAtPrice) * 100)
-    : 0
+    ? Math.round(
+        ((product.compareAtPrice - product.basePrice) /
+          product.compareAtPrice) *
+          100
+      )
+    : 0;
 
   const handleAddToCart = () => {
     if (!selectedSize) {
-      setShowSizeError(true)
-      return
+      setShowSizeError(true);
+      return;
     }
-    addToCart(product, parseInt(selectedSize))
-    setShowSizeError(false)
-  }
+    addToCart(product, parseInt(selectedSize));
+    setShowSizeError(false);
+  };
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-6">
-        <Link 
-          href="/products" 
+        <Link
+          href="/products?sort=price_asc"
           className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
@@ -152,9 +158,7 @@ export default function ProductPage({
                     <span className="text-lg text-gray-500 line-through">
                       ${product.compareAtPrice}
                     </span>
-                    <Badge variant="destructive">
-                      {discount}% OFF
-                    </Badge>
+                    <Badge variant="destructive">{discount}% OFF</Badge>
                   </>
                 )}
               </div>
@@ -171,22 +175,24 @@ export default function ProductPage({
           <div className="mt-8">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-medium text-gray-900">Size</h3>
-              <Link href="#size-guide" className="text-sm font-medium text-primary hover:text-primary/80">
+              <Link
+                href="#size-guide"
+                className="text-sm font-medium text-primary hover:text-primary/80"
+              >
                 Size guide
               </Link>
             </div>
 
-            <Select 
-              value={selectedSize} 
+            <Select
+              value={selectedSize}
               onValueChange={(value) => {
-                setSelectedSize(value)
-                setShowSizeError(false)
+                setSelectedSize(value);
+                setShowSizeError(false);
               }}
             >
-              <SelectTrigger className={cn(
-                "w-full mt-2",
-                showSizeError && "border-red-500"
-              )}>
+              <SelectTrigger
+                className={cn("w-full mt-2", showSizeError && "border-red-500")}
+              >
                 <SelectValue placeholder="Select size" />
               </SelectTrigger>
               <SelectContent>
@@ -205,20 +211,20 @@ export default function ProductPage({
           </div>
 
           <div className="mt-8 space-y-4">
-            <Button 
-              size="lg" 
-              className="w-full"
-              onClick={handleAddToCart}
-            >
+            <Button size="lg" className="w-full" onClick={handleAddToCart}>
               Add to Cart
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="w-full"
-              onClick={() => isInWishlist ? removeFromWishlist(product.id) : addToWishlist(product)}
+              onClick={() =>
+                isInWishlist
+                  ? removeFromWishlist(product.id)
+                  : addToWishlist(product)
+              }
             >
-              {isInWishlist ? 'Remove from Wishlist' : 'Add to Wishlist'}
+              {isInWishlist ? "Remove from Wishlist" : "Add to Wishlist"}
             </Button>
 
             <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -244,5 +250,5 @@ export default function ProductPage({
       {/* Related Products */}
       <RelatedProducts products={relatedProducts} />
     </div>
-  )
-} 
+  );
+}
