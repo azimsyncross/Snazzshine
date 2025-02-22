@@ -4,7 +4,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone,User } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -59,6 +59,17 @@ export default function ContactPage() {
           </p>
 
           <div className="mt-8 space-y-6">
+            
+            <div className="flex items-center gap-4">
+              <div className="bg-primary/10 p-3 rounded-lg">
+                <User className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-900">Contact Person</h3>
+                <p className="text-gray-600">LingQi Wang</p>
+              </div>
+            </div>
+            
             <div className="flex items-center gap-4">
               <div className="bg-primary/10 p-3 rounded-lg">
                 <Mail className="h-6 w-6 text-primary" />
